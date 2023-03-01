@@ -4,3 +4,12 @@
 ```
 pip install git+https://github.com/a-kanda/my-package.git
 ```
+
+## 使い方
+### データ可視化
+#### 折れ線グラフの描画
+```
+import tools
+
+tools.plot_linegraph(pd["timestamp"], pd, ["open", "high", "low", "close"])
+```
