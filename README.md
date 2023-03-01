@@ -13,3 +13,10 @@ import tools
 
 tools.plot_linegraph(pd["timestamp"], pd, ["open", "high", "low", "close"])
 ```
+
+#### ヒストグラムの描画
+```
+import tools
+
+tools.plot_histgram(pd, ["open", "high", "low", "close"], 7)
+```
