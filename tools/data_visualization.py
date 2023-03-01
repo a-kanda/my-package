@@ -17,3 +17,22 @@ def plot_linegraph(x_series, y_dataframe, y_columns):
         )
 
     fig.show()
+
+
+def plot_histgram(dataframe, columns, class_num=10):
+    """ヒストグラムを描画
+
+    Args:
+        dataframe (pandas.core.series.DataFrame): データ(pandas)
+        columns (list): データのカラム名
+        class_num (int): 階級の分割数
+    """
+
+    fig = go.Figure()
+
+    for i_col in columns:
+        fig.add_trace(
+            go.Histogram(x=dataframe[i_col], nbinsx=class_num, name=i_col)
+        )
+
+    fig.show()
